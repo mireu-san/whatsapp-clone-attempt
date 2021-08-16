@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar';
 
 function App() {
   return (
-    // naming convention
+    // BEM naming convention
     <div className="App">
-      
-
       <div className="app__body">
         <Sidebar />
         {/* Chat */}
