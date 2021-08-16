@@ -4,7 +4,9 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import AnnouncementIcon from '@material-ui/icons/Announcement';
 import MenuOpenIcon from '@material-ui/icons/MenuOpen';
 
-import './Sidebar.css'
+import { SearchOutlined } from '@material-ui/icons';
+import './Sidebar.css';
+import SidebarChat from './SidebarChat';
 
 function Sidebar() {
     return (
@@ -25,14 +27,18 @@ function Sidebar() {
             </div>
 
             <div className="sidebar__search">
-
+                <div className="sidebar__searchContainer">
+                    <SearchOutlined />
+                    <input placeholder="Search or start new chat" type="text" />
+                </div>
             </div>
 
             <div className="sidebar__chats">
+                <SidebarChat />
 
             </div>
         </div>
     );
 }
 
-export default Sidebar
+export default Sidebar;
