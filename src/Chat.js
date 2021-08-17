@@ -6,12 +6,21 @@ import MicIcon from '@material-ui/icons/Mic';
 import React, { useState, useEffect } from 'react';
 import './Chat.css';
 
+
 function Chat() {
+    const [input, setInput] = useState('');
     const [seed, setSeed] = useState('');
 
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 5000));
     }, []);
+
+    // backend -> console
+    const sendMessage = (e) => {
+        e.preventDefault();
+        console.log('You typed >>>', input);
+    }
+    // end of backend
 
     return (
         <div className='chat'>
@@ -49,13 +58,13 @@ function Chat() {
             </div>
                 {/* message end */}
 
-            <div className='chat_footer'>
+            <div className='chat__footer'>
                 <InsertEmoticonIcon />
-            <form>
-                <input type='text' />
-                <button>Send a message</button>
-            </form>
-            <MicIcon />
+                <form>
+                    <input value={input} onChange={(e) => setInput(e.target.value)} placeholder='Type a message' type='text' />
+                    <button onClick={sendMessage} type='submit'>Send a message</button>
+                </form>
+                <MicIcon />
             </div>
         </div>
     );

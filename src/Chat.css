@@ -60,9 +60,34 @@
 
 .chat__body {
     flex: 1;
-    background-image: url('https://twitter.com/Shian_oekaki02/status/1098988868278247424/photo/1');
+    background-image: url('https://cdn.pixabay.com/photo/2017/04/19/20/10/morning-2243465_1280.jpg');
     background-repeat: repeat;
     background-position: center;
     padding-left: 30px;
     overflow: scroll;
+}
+
+.chat__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+}
+
+.chat__footer > form {
+    flex: 1;
+    display: flex;
+    /* background-color: blue; */
+}
+
+.chat__footer > form > input {
+    flex: 1;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+}
+
+.chat__footer > form > button {
+    display: none;
 }
