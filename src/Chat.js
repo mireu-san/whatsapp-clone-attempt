@@ -1,9 +1,10 @@
 import { Avatar, IconButton } from '@material-ui/core';
 import { AttachFile, MoreVert, SearchOutlined } from '@material-ui/icons';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import MicIcon from '@material-ui/icons/Mic';
 
 import React, { useState, useEffect } from 'react';
 import './Chat.css';
-import { InsertEmoticon } from '@material-ui/icons';
 
 function Chat() {
     const [seed, setSeed] = useState('');
@@ -49,20 +50,15 @@ function Chat() {
                 {/* message end */}
 
             <div className='chat_footer'>
-                <InsertEmoticon />
+                <InsertEmoticonIcon />
             <form>
                 <input type='text' />
                 <button>Send a message</button>
             </form>
+            <MicIcon />
             </div>
-
-        <div className='chat__body'>
         </div>
-
-        </div>
-
-
-    )
-}
+    );
+};
 
 export default Chat
