@@ -19,8 +19,12 @@ function Chat() {
     const sendMessage = (e) => {
         e.preventDefault();
         console.log('You typed >>>', input);
+
+        setInput(''); // this will allow typed message to be vanished - FE
     }
     // end of backend
+
+
 
     return (
         <div className='chat'>
