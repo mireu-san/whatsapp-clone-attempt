@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyANGCK6b-eh65xwmsY1wFWja35GlW8f86o",
@@ -6,13 +8,14 @@ const firebaseConfig = {
     storageBucket: "whatsapp-clone-6d403.appspot.com",
     messagingSenderId: "898697520197",
     appId: "1:898697520197:web:2bd3dfdfcfdb1e96996f2c",
+    databseURL: "https://whatsapp-clone-6d403-default-rtdb.asia-southeast1.firebasedatabase.app/",
     measurementId: "G-5Y82WBF89W"
   };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig); // pass the config object
 const db = firebaseApp.firestore();
-const auth = firebase.auut();
-const provider = newfirebase.auth.GoogleAuthProvider();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
 
 export { auth, provider };
 export default db;
